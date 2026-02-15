@@ -32,7 +32,9 @@ This template is designed for Data Scientists and ML Engineers who want to kicks
 │   └── prod.yaml           # Override for production/server
 ├── data/                   # DATA STORAGE
 │   ├── 01-raw/             # Raw Data (Immutable)
-│   └── ...
+│   ├── 02-preprocessed/    # Clean data ready for training
+│   ├── 03-features/        # Data with engineered features.
+│   └── 04-predictions/     # Model output results
 ├── entrypoint/             # EXECUTION SCRIPTS (CLI)
 │   ├── run_train.py        # Training Orchestrator
 │   └── ...
@@ -44,7 +46,7 @@ This template is designed for Data Scientists and ML Engineers who want to kicks
 │   │   ├── training.py      # Training & Logging Logic
 │   │   └── inference.py     # Serving/Prediction Logic
 │   └── utils.py
-├── tests/                  # UNIT TESTS
+├── tests/                  # UNIT TESTS/QA
 ├── Dockerfile              # Containerization Setup
 ├── Makefile                # Command Shortcuts
 └── requirements.txt        # Python Dependencies
