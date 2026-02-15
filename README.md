@@ -26,17 +26,17 @@ This template is designed for Data Scientists and ML Engineers who want to kicks
 ## Project Structure
 
 ```text
-├── config/                            # CONTROL CENTER (YAML)
+├── config/                          
 │   ├── base.yaml                      # Main config (Target col, params, schema)
 │   ├── dev.yaml                       # Override for local/laptop development
 │   └── prod.yaml                      # Override for production/server
-├── data/                              # DATA STORAGE
+├── data/                             
 │   ├── 01-raw/                        # Raw Data (Immutable)
 │   ├── 02-preprocessed/               # Clean data ready for training
 │   ├── 03-features/                   # Data with engineered features.
 │   └── 04-predictions/                # Model output results
-├── entrypoint/                        # EXECUTION SCRIPTS (CLI)
-│   ├── run_train.py                   # Training Orchestrator
+├── entrypoint/                        
+│   ├── run_train.py                   # Training (CLI)
 │   └── ...
 ├── models/                            # ARTIFACTS (Saved .pkl Models & Preprocessors)
 ├── notebooks/
@@ -60,7 +60,7 @@ Ensure **Python 3.9+** is installed.
 
 ```bash
 # Clone this repository (or use as a GitHub Template)
-git clone [https://github.com/username/ai-ml-pipeline-template.git](https://github.com/username/ai-ml-pipeline-template.git)
+git clone [https://github.com/ahmdtrdi/AI-ML-Pipeline-Template.git](https://github.com/ahmdtrdi/AI-ML-Pipeline-Template.git)
 cd ai-ml-pipeline-template
 
 # Install dependencies & setup the 'src' package
