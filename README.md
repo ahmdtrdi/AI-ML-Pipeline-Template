@@ -26,30 +26,32 @@ This template is designed for Data Scientists and ML Engineers who want to kicks
 ## Project Structure
 
 ```text
-├── config/                 # CONTROL CENTER (YAML)
-│   ├── base.yaml           # Main config (Target col, params, schema)
-│   ├── dev.yaml            # Override for local/laptop development
-│   └── prod.yaml           # Override for production/server
-├── data/                   # DATA STORAGE
-│   ├── 01-raw/             # Raw Data (Immutable)
-│   ├── 02-preprocessed/    # Clean data ready for training
-│   ├── 03-features/        # Data with engineered features.
-│   └── 04-predictions/     # Model output results
-├── entrypoint/             # EXECUTION SCRIPTS (CLI)
-│   ├── run_train.py        # Training Orchestrator
+├── config/                            # CONTROL CENTER (YAML)
+│   ├── base.yaml                      # Main config (Target col, params, schema)
+│   ├── dev.yaml                       # Override for local/laptop development
+│   └── prod.yaml                      # Override for production/server
+├── data/                              # DATA STORAGE
+│   ├── 01-raw/                        # Raw Data (Immutable)
+│   ├── 02-preprocessed/               # Clean data ready for training
+│   ├── 03-features/                   # Data with engineered features.
+│   └── 04-predictions/                # Model output results
+├── entrypoint/                        # EXECUTION SCRIPTS (CLI)
+│   ├── run_train.py                   # Training Orchestrator
 │   └── ...
-├── models/                 # ARTIFACTS (Saved .pkl Models & Preprocessors)
-├── notebooks/              # EXPERIMENTS (Jupyter/EDA)
-├── src/                    # SOURCE CODE (Core Logic Package)
+├── models/                            # ARTIFACTS (Saved .pkl Models & Preprocessors)
+├── notebooks/
+│   ├── 01_EDA_Template.ipynb          # Empty template for data analysis 
+│   ├── 02_Modeling_Playground.ipynb   # Experiment Model
+├── src/                               
 │   ├── pipelines/
-│   │   ├── preprocessing.py # Feature Eng & Math Transforms Logic
-│   │   ├── training.py      # Training & Logging Logic
-│   │   └── inference.py     # Serving/Prediction Logic
+│   │   ├── preprocessing.py            # Feature Eng & Math Transforms Logic
+│   │   ├── training.py                 # Training & Logging Logic
+│   │   └── inference.py                # Serving/Prediction Logic
 │   └── utils.py
-├── tests/                  # UNIT TESTS/QA
-├── Dockerfile              # Containerization Setup
-├── Makefile                # Command Shortcuts
-└── requirements.txt        # Python Dependencies
+├── tests/                              # UNIT TESTS/QA
+├── Dockerfile                          # Containerization Setup
+├── Makefile                            # Command Shortcuts
+└── requirements.txt                    # Python Dependencies
 ```
 ## Quick Start
 
